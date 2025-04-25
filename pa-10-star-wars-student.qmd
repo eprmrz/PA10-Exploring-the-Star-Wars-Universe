@@ -172,7 +172,7 @@ sw_ships %>%
 
 Which movie has the second highest percentage of Hyperdrive ships?
 
-> N New Hope has the second highest percentage of Huperdrive ships.
+> A New Hope has the second highest percentage of Hyperdrive ships.
 
 
 
@@ -187,9 +187,9 @@ sw_ships %>%
   ggplot(aes(x = total_ships, 
              y = starships)) +
   #make points
-  geom_____(aes(color = trilogy)) +
+  geom_point(aes(color = trilogy)) +
   #fit a model
-  geom_____(method = "lm") +
+  geom_smooth(method = "lm") +
   #what does geom_text() do?
   geom_text(aes(label = title), 
             vjust = -1, 
@@ -199,7 +199,7 @@ sw_ships %>%
        subtitle = "The Number of Ships with Hyperdrive vs Total Ships") +
   theme_minimal() +
   #what aesthetic do we want to modify the color of points?
-  scale______viridis_d(end = 0.8) +
+  scale_color_viridis_d(end = 0.8) +
   theme(axis.title.x = element_blank(),
         axis.title.y = element_blank(),
         legend.position = "bottom",
@@ -210,7 +210,7 @@ sw_ships %>%
 
 What do you notice about the use of hyperdrive type vehicles in the episodes?
 
-> Insert Answer
+> Its a positive linear relationship between number of star ships and hyper drives. The Phantom Menace has a below average number of hyperdrive ships given its total number of ships. The Force Awakens used hyperdrive more than the Originals.
 
 
 ## Part 2: The Physical Features of Star Wars Characters
