@@ -100,7 +100,9 @@ map_dbl(sw_films, ~length(.x$starships))
 sw_films %>% map_dbl(., ~length(.x$starships))
 ```
 
-> 
+> The first line code piped the input (.) and title starships and then mapped them as a double vector.
+> The second line of code just uses maps and the dataset with rather than piping into the dataset.
+> The thrid line combines both the first and second line of code by mapping the data into a double vector.
 
 
 
