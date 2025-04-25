@@ -148,10 +148,10 @@ Now, let's make a plot examining how often hyperdrive ships appear in each episo
 ```{r}
 sw_ships %>% 
   #be sure to order titles by order/episode
-  ggplot(aes(y = ____(title, desc(episode)), 
+  ggplot(aes(y = reorder(title, desc(episode)), 
              x = prop)) + 
   #we want bars but our data is already summarized!
-  geom_____(aes(fill = trilogy)) + 
+  geom_col(aes(fill = trilogy)) + 
   labs(
     title = "The Rise of Hyperdrive",
     subtitle = "Percentage of Ships with Hyperdrive Capability"
@@ -160,7 +160,7 @@ sw_ships %>%
   scale_x_continuous(labels = scales::label_percent(scale = 1)) +
   theme_minimal() +
   #what aesthetic do we modify to change the bar color
-  scale______viridis_d(end = 0.8) +
+  scale_fill_viridis_d(end = 0.8) +
   theme(axis.title.x = element_blank(),
         axis.title.y = element_blank(),
         legend.position = "bottom",
@@ -172,7 +172,7 @@ sw_ships %>%
 
 Which movie has the second highest percentage of Hyperdrive ships?
 
-> Insert Answer Here
+> N New Hope has the second highest percentage of Huperdrive ships.
 
 
 
