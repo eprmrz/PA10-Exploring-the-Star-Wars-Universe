@@ -302,7 +302,7 @@ sw_peeps2 %>%
 Write some code to identify who is is the heaviest (look at the graph to help guide this) Star Wars character (excluding Jabba Desilijic Tiure).
 
 ```{r}
-
+sw_peeps2 %>% filter(mass > 155)
 ```
 
 >Insert Answer Here
