@@ -227,10 +227,10 @@ We want to extract out `name`, `height`, and `mass` as `character` vectors (for 
 ```{r}
 sw_peeps <- sw_people %>%  {
   tibble(
-    name = ____(., "name"),  #character
-    height = ____(., "height"), #character
-    mass = ____(., "mass"), #character
-    films = map____(., "films") #list
+    name = map_chr(., "name"),  #character
+    height = map_chr(., "height"), #character
+    mass = map_chr(., "mass"), #character
+    films = map(., "films") #list
   )}
 sw_peeps
 ```
@@ -240,9 +240,9 @@ Notice that the `films` column contains lists of urls for each film reference. L
 ```{r}
 film_names <- sw_films %>% {
   tibble(
-    episode_id = ____(., "episode_id"), #double
-    episode_name = ____(., "title"), #character
-    url = ____(., "url") #character
+    episode_id = map_dbl(., "episode_id"), #double
+    episode_name = map_chr(., "title"), #character
+    url = map_chr(., "url") #character
   )}
 film_names
 ```
